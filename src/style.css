@@ -1,9 +1,41 @@
 body {
     margin: 0;
-    font-family: "Karla", sans-serif;
+    font-family: "Inter", sans-serif;
+    background: #1F2937;
+    color: #FFF;
+}
+
+main{
+    padding: 3em;
 }
 
 h1 {
+    font-family: "Karla", sans-serif;
     font-weight: 800;
     font-size: 2.5rem;
+}
+
+button {
+    background: #10B981;
+    color: #FFF;
+    font-weight: 500;
+    border-radius: 6px;
+    padding: 0.7em 1.4em;
+    margin-bottom: 3em;
+}
+
+#generate-pwd {
+    margin-bottom: 3em;
+    border-bottom: 1px solid #2F3E53;
+}
+
+#pwd-results {
+    display: flex;
+    justify-content: space-evenly;
+}
+.pwd-tag {
+    width: 211px;
+    height: 39px;
+    border-radius: 6px;
+    background: #273549;
 }
