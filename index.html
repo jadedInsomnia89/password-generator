@@ -7,15 +7,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <main>
-      <h1>Generate a random password</h1>
-      <p>Never use an insecure password again.</p>
-      <button id="password-btn">Generate Passwords</button>
+      <section id="generate-pwd">
+        <h1>Generate a random password</h1>
+        <p>Never use an insecure password again.</p>
+        <button>Generate Passwords</button>
+      </section>
+      <section id="pwd-results">
+        <div class="pwd-tag"></div>
+        <div class="pwd-tag"></div>
+      </section>
     </main>
     <script type="module" src="/src/main.js"></script>
   </body>
