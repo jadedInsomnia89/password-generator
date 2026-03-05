@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
@@ -5,14 +9,24 @@ body {
     color: #FFF;
 }
 
-main{
-    padding: 3em;
+section {
+    width: 85%;
+    margin: 0 auto;
 }
 
 h1 {
     font-family: "Karla", sans-serif;
     font-weight: 800;
     font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-weight: 400;
+    color: #D5D4D8;
+    font-size: 1.25rem;
+    margin-bottom: 2.5em;
 }
 
 button {
@@ -21,21 +35,44 @@ button {
     font-weight: 500;
     border-radius: 6px;
     padding: 0.7em 1.4em;
-    margin-bottom: 3em;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+
 }
 
 #generate-pwd {
-    margin-bottom: 3em;
+    padding-bottom: 2em;
+    margin-top: 7em;
+    margin-bottom: 2em;
     border-bottom: 1px solid #2F3E53;
 }
 
 #pwd-results {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
 }
 .pwd-tag {
-    width: 211px;
+    min-width: 211px;
     height: 39px;
+    padding: 1em 3em;
     border-radius: 6px;
     background: #273549;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pwd-tag > p {
+    line-height: 32px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #55F991;
+    margin: 0;
+}
+
+.highlight {
+    display: block;
+    color: #10B981;
 }
