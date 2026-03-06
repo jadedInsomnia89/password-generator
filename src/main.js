@@ -2,8 +2,11 @@ import "./style.css";
 
 const characterLimit = 50;
 const generatePwdBtn = document.getElementById("generate-pwd-btn");
+const pwdResult1 = document.getElementById("pwd-result-1");
+const pwdResult2 = document.getElementById("pwd-result-2");
 
 function generatePassword(length = 12, includeSpecial = true) {
+  if (length > 50) length = 50;
   const lowercase = "abcdefghijklmnopqrstuvwxyz";
   const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const numbers = "0123456789";
@@ -20,5 +23,10 @@ function generatePassword(length = 12, includeSpecial = true) {
   return password;
 }
 
-generatePassword();
-// generatePwdBtn.addEventListener("click", generatePassword);
+function getPasswords() {
+  const pwd1 = generatePassword();
+  const pwd2 = generatePassword();
+  pwdResult1.textContent = pwd1;
+  pwdResult2.textContent = pwd2;
+}
+generatePwdBtn.addEventListener("click", getPasswords);
