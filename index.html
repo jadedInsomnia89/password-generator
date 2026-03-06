@@ -16,7 +16,13 @@
       <section id="generate-pwd">
         <h1>Generate a <span class="highlight">random password</span></h1>
         <h2>Never use an insecure password again.</h2>
-        <button type="button" id="generate-pwd-btn">Generate Passwords</button>
+        <form id="generate-pwd-form">
+          <label for="include-special-chars">Include Special Characters?</label>
+          <input type="checkbox" name="includeSpecialChars" id="include-special-chars">
+          <button type="submit">
+            Generate Passwords
+          </button>
+        </form>
       </section>
       <section id="pwd-results">
         <div class="pwd-tag"><p id="pwd-result-1"></p></div>

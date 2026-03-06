@@ -29,7 +29,7 @@ h2 {
     margin-bottom: 2.5em;
 }
 
-button {
+form#generate-pwd-form button {
     background: #10B981;
     color: #FFF;
     font-weight: 500;
