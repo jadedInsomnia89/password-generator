@@ -76,3 +76,16 @@ form#generate-pwd-form button {
     display: block;
     color: #10B981;
 }
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+input[type="range"] {
+    accent-color: #10B981;
+    width: 50%;
+}

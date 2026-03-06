@@ -1,12 +1,18 @@
 import "./style.css";
 
-const characterLimit = 50;
+const minCharacterLimit = 8;
+const maxCharacterLimit = 50;
 const generatePwdForm = document.getElementById("generate-pwd-form");
 const pwdResult1 = document.getElementById("pwd-result-1");
 const pwdResult2 = document.getElementById("pwd-result-2");
 
 function generatePassword(length, includeSpecialChars) {
-  if (length > 50) length = 50;
+  length =
+    length < minCharacterLimit
+      ? minCharacterLimit
+      : length > maxCharacterLimit
+        ? maxCharacterLimit
+        : length;
   const lowercase = "abcdefghijklmnopqrstuvwxyz";
   const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const numbers = "0123456789";
@@ -34,6 +40,7 @@ generatePwdForm.addEventListener("submit", (e) => {
   const pwdRequirements = new FormData(generatePwdForm);
   const includeSpecialChars =
     pwdRequirements.get("includeSpecialChars") === "on";
+  const length = Number(pwdRequirements.get("pwdLength"));
 
-  getPasswords(undefined, includeSpecialChars);
+  getPasswords(length, includeSpecialChars);
 });
