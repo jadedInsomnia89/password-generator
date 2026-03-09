@@ -2,11 +2,18 @@
     box-sizing: border-box;
 }
 
+:root {
+    --background-color: #1F2937;
+    --accent-color: #10B981;
+    --font-primary-color: #FFF;
+    --font-secondary-color: #D5D4D8;
+}
+
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
-    background: #1F2937;
-    color: #FFF;
+    background: var(--background-color);
+    color: var(--font-primary-color);
 }
 
 section {
@@ -24,14 +31,14 @@ h1 {
 
 h2 {
     font-weight: 400;
-    color: #D5D4D8;
+    color: var(--font-secondary-color);
     font-size: 1.25rem;
     margin-bottom: 2.5em;
 }
 
 form#generate-pwd-form button {
-    background: #10B981;
-    color: #FFF;
+    background: var(--accent-color);
+    color: var(--font-primary-color);
     font-weight: 500;
     border-radius: 6px;
     padding: 0.7em 1.4em;
@@ -68,13 +75,13 @@ form#generate-pwd-form button {
     line-height: 32px;
     font-size: 1rem;
     font-weight: 500;
-    color: #55F991;
+    color: var(--accent-color);
     margin: 0;
 }
 
 .highlight {
     display: block;
-    color: #10B981;
+    color: var(--accent-color);
 }
 
 input[type="checkbox"] {
@@ -86,6 +93,6 @@ button {
 }
 
 input[type="range"] {
-    accent-color: #10B981;
+    accent-color: var(--accent-color);
     width: 50%;
 }
