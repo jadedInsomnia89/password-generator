@@ -27,7 +27,9 @@
                 min="8"
                 max="50"
                 value="16"
+                oninput="output.value = this.value"
               />
+              <output id="output" for="pwd-length">16</output>
             </div>
             <div class="pwd-reqs-row">
               <label for="include-special-chars"
