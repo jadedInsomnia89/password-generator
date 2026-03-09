@@ -3,7 +3,8 @@
 }
 
 :root {
-    --background-color: #1F2937;
+    --bg-primary-color: #1F2937;
+    --bg-secondary-color: #273549;
     --accent-color: #10B981;
     --font-primary-color: #FFF;
     --font-secondary-color: #D5D4D8;
@@ -12,7 +13,7 @@
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
-    background: var(--background-color);
+    background: var(--bg-primary-color);
     color: var(--font-primary-color);
 }
 
@@ -36,7 +37,34 @@ h2 {
     margin-bottom: 2.5em;
 }
 
-form#generate-pwd-form button {
+input {
+    cursor: pointer;
+    accent-color: var(--accent-color);
+}
+
+.highlight {
+    display: block;
+    color: var(--accent-color);
+}
+
+/* =================
+    Section 1 - Generate PWD
+   ================= */
+
+#generate-pwd {
+    padding-bottom: 2em;
+    margin-top: 7em;
+    margin-bottom: 2em;
+    border-bottom: 1px solid #2F3E53;
+}
+
+#generate-pwd-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#generate-pwd-form button {
     background: var(--accent-color);
     color: var(--font-primary-color);
     font-weight: 500;
@@ -46,12 +74,29 @@ form#generate-pwd-form button {
 
 }
 
-#generate-pwd {
-    padding-bottom: 2em;
-    margin-top: 7em;
-    margin-bottom: 2em;
-    border-bottom: 1px solid #2F3E53;
+.pwd-reqs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 2em;
+    border-radius: 6px;
+    margin: 0 auto 1.5em;
+    background: var(--bg-secondary-color);
+    width: 100%;
 }
+
+.pwd-reqs-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pwd-reqs-row input[type="range"] {
+    width: 50%;
+}
+
+/* =================
+    Section 2 - PWD Results 
+   ================= */
 
 #pwd-results {
     display: flex;
@@ -64,7 +109,7 @@ form#generate-pwd-form button {
     height: 39px;
     padding: 1em 3em;
     border-radius: 6px;
-    background: #273549;
+    background: var(--bg-secondary-color);
     text-align: center;
     display: flex;
     justify-content: center;
@@ -77,22 +122,4 @@ form#generate-pwd-form button {
     font-weight: 500;
     color: var(--accent-color);
     margin: 0;
-}
-
-.highlight {
-    display: block;
-    color: var(--accent-color);
-}
-
-input[type="checkbox"] {
-    cursor: pointer;
-}
-
-button {
-    cursor: pointer;
-}
-
-input[type="range"] {
-    accent-color: var(--accent-color);
-    width: 50%;
 }
