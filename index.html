@@ -17,11 +17,9 @@
         <h1>Generate a <span class="highlight">random password</span></h1>
         <h2>Never use an insecure password again.</h2>
         <form id="generate-pwd-form">
-          <div class="grid-container">
-            <div class="grid-item">
+          <div class="pwd-reqs-container">
+            <div class="pwd-reqs-row">
               <label for="pwd-length">Password Length</label>
-            </div>
-            <div class="grid-item">
               <input
                 type="range"
                 name="pwdLength"
@@ -31,12 +29,10 @@
                 value="16"
               />
             </div>
-            <div class="grid-item">
+            <div class="pwd-reqs-row">
               <label for="include-special-chars"
                 >Include Special Characters</label
               >
-            </div>
-            <div class="grid-item">
               <input
                 type="checkbox"
                 name="includeSpecialChars"
